@@ -1,0 +1,397 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DF27C84C58D795A2EF21DC3 /* Pods_WizardProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B50DA4FE52D348392A3C12 /* Pods_WizardProgressView.framework */; };
+		C318D4361E703F12007B3E40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C318D4351E703F12007B3E40 /* AppDelegate.swift */; };
+		C318D4381E703F12007B3E40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C318D4371E703F12007B3E40 /* ViewController.swift */; };
+		C318D43B1E703F12007B3E40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C318D4391E703F12007B3E40 /* Main.storyboard */; };
+		C318D43D1E703F12007B3E40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C318D43C1E703F12007B3E40 /* Assets.xcassets */; };
+		C318D4401E703F12007B3E40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C318D43E1E703F12007B3E40 /* LaunchScreen.storyboard */; };
+		C318D4481E703F81007B3E40 /* WizardProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C318D4471E703F81007B3E40 /* WizardProgressView.swift */; };
+		C3C438EF1E7195570068F3BE /* SubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C438EE1E7195570068F3BE /* SubView.swift */; };
+		C3C438F11E7195620068F3BE /* SubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C438F01E7195620068F3BE /* SubView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		13A1F069278ADB787704124E /* Pods-WizardProgressView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WizardProgressView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WizardProgressView/Pods-WizardProgressView.debug.xcconfig"; sourceTree = "<group>"; };
+		A8B50DA4FE52D348392A3C12 /* Pods_WizardProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WizardProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C318D4321E703F12007B3E40 /* WizardProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WizardProgressView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C318D4351E703F12007B3E40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C318D4371E703F12007B3E40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C318D43A1E703F12007B3E40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C318D43C1E703F12007B3E40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C318D43F1E703F12007B3E40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C318D4411E703F12007B3E40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C318D4471E703F81007B3E40 /* WizardProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardProgressView.swift; sourceTree = "<group>"; };
+		C3C438EE1E7195570068F3BE /* SubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubView.swift; sourceTree = "<group>"; };
+		C3C438F01E7195620068F3BE /* SubView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubView.xib; sourceTree = "<group>"; };
+		D2CCC12FFA21684B24F8E1B2 /* Pods-WizardProgressView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WizardProgressView.release.xcconfig"; path = "Pods/Target Support Files/Pods-WizardProgressView/Pods-WizardProgressView.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C318D42F1E703F12007B3E40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DF27C84C58D795A2EF21DC3 /* Pods_WizardProgressView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DAA6B2D803B89D6C09A0688 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8B50DA4FE52D348392A3C12 /* Pods_WizardProgressView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BF5F4A321F38884070BB618 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13A1F069278ADB787704124E /* Pods-WizardProgressView.debug.xcconfig */,
+				D2CCC12FFA21684B24F8E1B2 /* Pods-WizardProgressView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C318D4291E703F12007B3E40 = {
+			isa = PBXGroup;
+			children = (
+				C318D4341E703F12007B3E40 /* WizardProgressView */,
+				C318D4331E703F12007B3E40 /* Products */,
+				6BF5F4A321F38884070BB618 /* Pods */,
+				3DAA6B2D803B89D6C09A0688 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C318D4331E703F12007B3E40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C318D4321E703F12007B3E40 /* WizardProgressView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C318D4341E703F12007B3E40 /* WizardProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				C318D4351E703F12007B3E40 /* AppDelegate.swift */,
+				C318D4371E703F12007B3E40 /* ViewController.swift */,
+				C318D4391E703F12007B3E40 /* Main.storyboard */,
+				C318D43C1E703F12007B3E40 /* Assets.xcassets */,
+				C318D43E1E703F12007B3E40 /* LaunchScreen.storyboard */,
+				C318D4411E703F12007B3E40 /* Info.plist */,
+				C318D4471E703F81007B3E40 /* WizardProgressView.swift */,
+				C3C438EE1E7195570068F3BE /* SubView.swift */,
+				C3C438F01E7195620068F3BE /* SubView.xib */,
+			);
+			path = WizardProgressView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C318D4311E703F12007B3E40 /* WizardProgressView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C318D4441E703F12007B3E40 /* Build configuration list for PBXNativeTarget "WizardProgressView" */;
+			buildPhases = (
+				331210D46865B9376CE7A43D /* [CP] Check Pods Manifest.lock */,
+				C318D42E1E703F12007B3E40 /* Sources */,
+				C318D42F1E703F12007B3E40 /* Frameworks */,
+				C318D4301E703F12007B3E40 /* Resources */,
+				BCFBD5B73A2E181561B7820E /* [CP] Embed Pods Frameworks */,
+				DBBB5570FD41606820FA9028 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WizardProgressView;
+			productName = WizardProgressView;
+			productReference = C318D4321E703F12007B3E40 /* WizardProgressView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C318D42A1E703F12007B3E40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Asad Ali";
+				TargetAttributes = {
+					C318D4311E703F12007B3E40 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 7D99A75SK5;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C318D42D1E703F12007B3E40 /* Build configuration list for PBXProject "WizardProgressView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C318D4291E703F12007B3E40;
+			productRefGroup = C318D4331E703F12007B3E40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C318D4311E703F12007B3E40 /* WizardProgressView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C318D4301E703F12007B3E40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C318D4401E703F12007B3E40 /* LaunchScreen.storyboard in Resources */,
+				C3C438F11E7195620068F3BE /* SubView.xib in Resources */,
+				C318D43D1E703F12007B3E40 /* Assets.xcassets in Resources */,
+				C318D43B1E703F12007B3E40 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		331210D46865B9376CE7A43D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BCFBD5B73A2E181561B7820E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WizardProgressView/Pods-WizardProgressView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBBB5570FD41606820FA9028 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WizardProgressView/Pods-WizardProgressView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C318D42E1E703F12007B3E40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C318D4481E703F81007B3E40 /* WizardProgressView.swift in Sources */,
+				C3C438EF1E7195570068F3BE /* SubView.swift in Sources */,
+				C318D4381E703F12007B3E40 /* ViewController.swift in Sources */,
+				C318D4361E703F12007B3E40 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C318D4391E703F12007B3E40 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C318D43A1E703F12007B3E40 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C318D43E1E703F12007B3E40 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C318D43F1E703F12007B3E40 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C318D4421E703F12007B3E40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C318D4431E703F12007B3E40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C318D4451E703F12007B3E40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13A1F069278ADB787704124E /* Pods-WizardProgressView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7D99A75SK5;
+				INFOPLIST_FILE = WizardProgressView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.WizardProgressView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C318D4461E703F12007B3E40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2CCC12FFA21684B24F8E1B2 /* Pods-WizardProgressView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7D99A75SK5;
+				INFOPLIST_FILE = WizardProgressView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.WizardProgressView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C318D42D1E703F12007B3E40 /* Build configuration list for PBXProject "WizardProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C318D4421E703F12007B3E40 /* Debug */,
+				C318D4431E703F12007B3E40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C318D4441E703F12007B3E40 /* Build configuration list for PBXNativeTarget "WizardProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C318D4451E703F12007B3E40 /* Debug */,
+				C318D4461E703F12007B3E40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C318D42A1E703F12007B3E40 /* Project object */;
+}
