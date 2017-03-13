@@ -26,13 +26,11 @@ class WizardProgressView: UIView {
     
     //MARK:- Private Variables
     fileprivate var scrollView: UIScrollView! = UIScrollView()
-    fileprivate var contentView: UIView! = UIView()
+    fileprivate var contentView: UIStackView! = UIStackView()
     fileprivate var contentViewWidth: Constraint!
-    fileprivate var tabableSteps: [UIButton] = []
+    fileprivate var tabableSteps: [WizardStep] = []
     fileprivate var lineBetweenSteps: [UIView] = []
-    fileprivate var stepLabels: [UILabel] = []
     fileprivate var completedSteps: Set<Int> = []
-    fileprivate var stepCircleSize: Int = 30
     
     
     
@@ -56,7 +54,7 @@ class WizardProgressView: UIView {
     
     
     //MARK:- Public Methods
-    open func setupWizardProgress(numberOfSteps tabs: Int, selectedStepIndex: Int = 0, selectedStepColor: UIColor = .orange, nonSelectedStepColor: UIColor = .black, completedStepColor: UIColor = .green, minimumStepDistance: Int = 30, wizardDelegate: WizardProgressViewDelegate) {
+    open func setupWizardProgress(numberOfSteps tabs: Int, selectedStepIndex: Int = 0, selectedStepColor: UIColor = .orange, nonSelectedStepColor: UIColor = .black, completedStepColor: UIColor = .green, minimumStepDistance: Int = 50, wizardDelegate: WizardProgressViewDelegate) {
         
         self.numberOfSteps = tabs
         self.selectedStepColor = selectedStepColor
@@ -75,6 +73,8 @@ class WizardProgressView: UIView {
 
         self.layoutIfNeeded()
         
+        self.backgroundColor = .clear
+        
         self.addSubview(self.scrollView)
         self.scrollView.bounces = false
         self.scrollView.showsHorizontalScrollIndicator = false
@@ -83,97 +83,66 @@ class WizardProgressView: UIView {
             make.size.equalTo(self)
         }
         
-        
+        self.contentView.alignment = .fill
+        self.contentView.axis = .horizontal
+        self.contentView.distribution = .equalSpacing
         self.scrollView.addSubview(self.contentView)
         
-    
-        var totalWidth: Int = 40
+        self.contentView.snp.makeConstraints { (make) -> Void in
+
+            make.edges.edges.equalTo(self.scrollView)
+            make.height.equalTo(self.scrollView)
+        }
         
-        let screenWidth = Int(self.bounds.size.width)
-        let widthWithoutLines = self.numberOfSteps * self.stepCircleSize + totalWidth
-        let lineSpace = (screenWidth - widthWithoutLines) / (self.numberOfSteps - 1)
-        let lineWidth: Int = max(lineSpace, self.minimumStepDistance)
         
         for i in 0..<self.numberOfSteps {
             
-            let btn: UIButton = UIButton(type: .system)
-            btn.titleLabel?.font = UIFont.systemFont(ofSize: 12.0)
-            btn.setTitleColor(.black, for: .normal)
-            btn.setTitle("\(i+1)", for: .normal)
-            btn.tag = i
-            btn.addTarget(self, action: #selector(WizardProgressView.btnStepClicked(_:)), for: .touchUpInside)
+            let step: WizardStep = Bundle.main.loadNibNamed("WizardStep", owner: self, options: nil)?.last as! WizardStep
             
-            self.contentView.addSubview(btn)
+            step.lblCounter.font = UIFont.systemFont(ofSize: 12.0)
+            step.lblCounter.text = "\(i+1)"
             
-            btn.snp.makeConstraints({ (make) in
-                
-                make.height.equalTo(self.stepCircleSize)
-                make.width.equalTo(self.stepCircleSize)
-                make.centerY.equalTo(self.contentView).offset(-6)
-                
-                if i == 0 {
-                    
-                    make.leading.equalTo(self.contentView).offset(20)
-                    
-                } else {
-                    
-                    make.leading.equalTo(self.lineBetweenSteps[i-1].snp.trailing)
-                }
-                
-                totalWidth += self.stepCircleSize
-            })
+            step.lblTitle.text = self.delegate.wizardProgressView(self, titleForStepAtIndex: i)
+            step.lblCounter.layer.cornerRadius = CGFloat(step.lblCounter.bounds.height/2)
+            step.lblCounter.layer.masksToBounds = true
             
-            btn.layer.cornerRadius = CGFloat(self.stepCircleSize/2)
-            btn.layer.borderWidth = 1.5
+            step.btnTap.tag = i
+            step.btnTap.addTarget(self, action: #selector(WizardProgressView.btnStepClicked(_:)), for: .touchUpInside)
             
-            
-            
-            let lbl: UILabel = UILabel()
-            lbl.textAlignment = .center
-            lbl.font = UIFont.systemFont(ofSize: 9.0)
-            lbl.text = self.delegate.wizardProgressView(self, titleForStepAtIndex: i)
-            
-            self.contentView.addSubview(lbl)
-            
-            lbl.snp.makeConstraints({ (make) in
-                
-                make.centerX.equalTo(btn)
-                make.top.equalTo(btn.snp.bottom).offset(4)
-            })
+            self.contentView.addArrangedSubview(step)
             
             
             // Last step, only label & button
             if i !=  self.numberOfSteps-1 {
                 
+                let middleView: UIView = UIView()
+                middleView.backgroundColor = .clear
+                
+                self.contentView.addArrangedSubview(middleView)
+                
+                middleView.snp.makeConstraints({ (make) in
+                    
+                    make.width.equalTo(self.minimumStepDistance)
+                })
+                
+                
                 let line: UIView = UIView()
                 line.backgroundColor = self.nonSelectedStepColor
-                
-                self.contentView.addSubview(line)
+                middleView.addSubview(line)
                 
                 line.snp.makeConstraints({ (make) in
                     
-                    make.width.equalTo(lineWidth)
-                    make.height.equalTo(2)
-                    make.centerY.equalTo(btn)
-                    make.leading.equalTo(btn.snp.trailing)
-                    
-                    totalWidth += lineWidth
+                    make.width.equalTo(middleView)
+                    make.height.equalTo(1.0)
+                    make.centerY.equalTo(middleView)
+                    make.leading.equalTo(middleView)
                 })
                 
-                self.lineBetweenSteps.append(line)
+                self.lineBetweenSteps.append(middleView)
             }
             
             
-            self.tabableSteps.append(btn)
-            self.stepLabels.append(lbl)
-            
-        }
-
-        
-        self.contentView.snp.makeConstraints { (make) -> Void in
-            make.edges.equalTo(self.scrollView)
-            make.height.equalTo(self.scrollView)
-            self.contentViewWidth = make.width.equalTo(totalWidth).constraint
+            self.tabableSteps.append(step)
         }
         
         
@@ -239,53 +208,37 @@ class WizardProgressView: UIView {
         
         for i in 0..<self.numberOfSteps {
             
-            let btn = self.tabableSteps[i]
-            let lbl = self.stepLabels[i]
-            var line: UIView? = nil
-            if i > 0 && i < self.numberOfSteps {
-                line = self.lineBetweenSteps[i-1]
-            }
+            let step = self.tabableSteps[i]
             
             if self.completedSteps.contains(i) {
                 
-                btn.setTitleColor(self.completedStepColor, for: .normal)
-                btn.setTitle("✓", for: .normal)
-                if self.selectedStepIndex == i {
-                    btn.layer.borderColor = self.selectedStepColor.cgColor
-                    lbl.textColor = self.selectedStepColor
-                } else {
-                    btn.layer.borderColor = self.completedStepColor.cgColor
-                    lbl.textColor = self.completedStepColor
-                }
-                line?.backgroundColor = self.completedStepColor
+                step.lblCounter.text = "✓"
+            }
+            
+            if self.selectedStepIndex == i {
                 
-            } else if self.selectedStepIndex == i {
-                
-                btn.layer.borderColor = self.selectedStepColor.cgColor
-                btn.setTitleColor(self.selectedStepColor, for: .normal)
-                lbl.textColor = self.selectedStepColor
-                line?.backgroundColor = self.selectedStepColor
                 
             } else {
                 
-                btn.layer.borderColor = self.nonSelectedStepColor.cgColor
-                btn.setTitleColor(self.nonSelectedStepColor, for: .normal)
-                lbl.textColor = self.nonSelectedStepColor
-                line?.backgroundColor = self.nonSelectedStepColor
             }
         }
     }
     
     fileprivate func scrollToSelectedIndexIfNeeded() {
         
-        let btn = self.tabableSteps[self.selectedStepIndex]
+        let step = self.tabableSteps[self.selectedStepIndex]
         
-        let originX = self.convert(btn.frame, from:self.contentView).origin.x
-        print(originX)
+        let originX = self.convert(step.frame, from:self.contentView).origin.x
+        let width = abs(originX) + step.bounds.width
+        let contentOffsetX = self.scrollView.contentOffset.x
+        
+        print("Origin: ", originX)
+        print("size: ", width)
+        print("Offset: ", contentOffsetX)
         if originX < 10 {
-            self.scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
-        } else if originX + 10 >= self.bounds.width {
-            self.scrollView.setContentOffset(CGPoint(x: self.scrollView.contentOffset.x + originX + btn.bounds.width + 10 - self.bounds.width, y: 0), animated: true)
+            self.scrollView.setContentOffset(CGPoint(x: max(0, self.scrollView.contentOffset.x-width), y: 0), animated: true)
+        } else if width >= self.bounds.width {
+            self.scrollView.setContentOffset(CGPoint(x: min(self.scrollView.contentOffset.x + width + 10 - self.bounds.width, self.scrollView.contentSize.width - self.bounds.width), y: 0), animated: true)
         }
     }
     

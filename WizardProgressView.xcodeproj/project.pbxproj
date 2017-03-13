@@ -13,7 +13,9 @@
 		C318D43B1E703F12007B3E40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C318D4391E703F12007B3E40 /* Main.storyboard */; };
 		C318D43D1E703F12007B3E40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C318D43C1E703F12007B3E40 /* Assets.xcassets */; };
 		C318D4401E703F12007B3E40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C318D43E1E703F12007B3E40 /* LaunchScreen.storyboard */; };
-		C318D4481E703F81007B3E40 /* WizardProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C318D4471E703F81007B3E40 /* WizardProgressView.swift */; };
+		C395881D1E76C883003368E6 /* WizardProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C395881C1E76C883003368E6 /* WizardProgressView.swift */; };
+		C395881F1E76C8AF003368E6 /* WizardStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = C395881E1E76C8AF003368E6 /* WizardStep.swift */; };
+		C39588211E76C8B9003368E6 /* WizardStep.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39588201E76C8B9003368E6 /* WizardStep.xib */; };
 		C3C438EF1E7195570068F3BE /* SubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C438EE1E7195570068F3BE /* SubView.swift */; };
 		C3C438F11E7195620068F3BE /* SubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C438F01E7195620068F3BE /* SubView.xib */; };
 /* End PBXBuildFile section */
@@ -28,7 +30,9 @@
 		C318D43C1E703F12007B3E40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C318D43F1E703F12007B3E40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C318D4411E703F12007B3E40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C318D4471E703F81007B3E40 /* WizardProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardProgressView.swift; sourceTree = "<group>"; };
+		C395881C1E76C883003368E6 /* WizardProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardProgressView.swift; sourceTree = "<group>"; };
+		C395881E1E76C8AF003368E6 /* WizardStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardStep.swift; sourceTree = "<group>"; };
+		C39588201E76C8B9003368E6 /* WizardStep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WizardStep.xib; sourceTree = "<group>"; };
 		C3C438EE1E7195570068F3BE /* SubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubView.swift; sourceTree = "<group>"; };
 		C3C438F01E7195620068F3BE /* SubView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubView.xib; sourceTree = "<group>"; };
 		D2CCC12FFA21684B24F8E1B2 /* Pods-WizardProgressView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WizardProgressView.release.xcconfig"; path = "Pods/Target Support Files/Pods-WizardProgressView/Pods-WizardProgressView.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,15 +88,25 @@
 		C318D4341E703F12007B3E40 /* WizardProgressView */ = {
 			isa = PBXGroup;
 			children = (
+				C395881B1E76C883003368E6 /* WizardProgressView */,
 				C318D4351E703F12007B3E40 /* AppDelegate.swift */,
 				C318D4371E703F12007B3E40 /* ViewController.swift */,
 				C318D4391E703F12007B3E40 /* Main.storyboard */,
 				C318D43C1E703F12007B3E40 /* Assets.xcassets */,
 				C318D43E1E703F12007B3E40 /* LaunchScreen.storyboard */,
 				C318D4411E703F12007B3E40 /* Info.plist */,
-				C318D4471E703F81007B3E40 /* WizardProgressView.swift */,
 				C3C438EE1E7195570068F3BE /* SubView.swift */,
 				C3C438F01E7195620068F3BE /* SubView.xib */,
+			);
+			path = WizardProgressView;
+			sourceTree = "<group>";
+		};
+		C395881B1E76C883003368E6 /* WizardProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				C395881C1E76C883003368E6 /* WizardProgressView.swift */,
+				C395881E1E76C8AF003368E6 /* WizardStep.swift */,
+				C39588201E76C8B9003368E6 /* WizardStep.xib */,
 			);
 			path = WizardProgressView;
 			sourceTree = "<group>";
@@ -164,6 +178,7 @@
 				C3C438F11E7195620068F3BE /* SubView.xib in Resources */,
 				C318D43D1E703F12007B3E40 /* Assets.xcassets in Resources */,
 				C318D43B1E703F12007B3E40 /* Main.storyboard in Resources */,
+				C39588211E76C8B9003368E6 /* WizardStep.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,8 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C318D4481E703F81007B3E40 /* WizardProgressView.swift in Sources */,
+				C395881D1E76C883003368E6 /* WizardProgressView.swift in Sources */,
 				C3C438EF1E7195570068F3BE /* SubView.swift in Sources */,
+				C395881F1E76C8AF003368E6 /* WizardStep.swift in Sources */,
 				C318D4381E703F12007B3E40 /* ViewController.swift in Sources */,
 				C318D4361E703F12007B3E40 /* AppDelegate.swift in Sources */,
 			);

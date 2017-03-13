@@ -56,7 +56,7 @@ extension ViewController: WizardProgressViewDelegate {
     
     func wizardProgressView(_ wizardProgressView: WizardProgressView, titleForStepAtIndex index: Int) -> String {
         
-        return "Step \(index)"
+        return "Step \(index+1)"
     }
     
     func wizardProgressView(_ wizardProgressView: WizardProgressView, didSelectStepAtIndex index: Int) {
